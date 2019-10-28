@@ -2,16 +2,16 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting."
   homepage "https://github.com/toshimaru/nyan"
-  version "0.5.0"
+  version "0.5.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/toshimaru/nyan/releases/download/v0.5.0/nyan_Darwin_x86_64.tar.gz"
-    sha256 "ecdcf0c1312b1f7fb498700e4a7e9a9b8a338c28496e33b7abffd1d2adedebad"
+    url "https://github.com/toshimaru/nyan/releases/download/v0.5.1/nyan_Darwin_x86_64.tar.gz"
+    sha256 "33c0c2f9c723cbce2ba87a817a56ae3f1238b91d994d13406e071248287017a5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v0.5.0/nyan_Linux_x86_64.tar.gz"
-      sha256 "6ae67649bd33671fb0ddbb2769c49b393cc35222cd1927166861b462879cdd08"
+      url "https://github.com/toshimaru/nyan/releases/download/v0.5.1/nyan_Linux_x86_64.tar.gz"
+      sha256 "cccaabc588ff0847024b135dfcf4c646fc6e491223756c738902354f0f405ecb"
     end
   end
 
