@@ -7,11 +7,11 @@ class Nyan < Formula
 
   if OS.mac?
     url "https://github.com/toshimaru/nyan/releases/download/v0.9.0/nyan_Darwin_x86_64.tar.gz"
-    sha256 "f61bb42ab3b6ab6a59b4419d1fa7669cc35a318d7acbd7e831ef288e03b88464"
+    sha256 "a52ad4ad39b0a09ba0c953010708e6c6ada0b8c1c72301af9009ae1c7f544db9"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/toshimaru/nyan/releases/download/v0.9.0/nyan_Linux_x86_64.tar.gz"
-    sha256 "e41360056aaa8fb74d690ffb684e920f5712f1b380a7807d8e4bb05c4bb919c5"
+    sha256 "9541824a762913e57bf2767db0ba9ad92b8d2b54e7672e915d6c9cf8a8ae3528"
   end
 
   def install
