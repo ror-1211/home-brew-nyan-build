@@ -5,25 +5,30 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting."
   homepage "https://github.com/toshimaru/nyan"
-  version "0.9.4"
+  version "0.9.5"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/toshimaru/nyan/releases/download/v0.9.4/nyan_Darwin_x86_64.tar.gz"
-    sha256 "ddcc9a86a32471d822be39895d9249fd655ce765f0978f4fb4820e8698a26e0e"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/toshimaru/nyan/releases/download/v0.9.5/nyan_Darwin_x86_64.tar.gz"
+      sha256 "d9cdcde026d4b765c17de277ba60fe3626c0d21424e7f71cc563a865c2ea71d9"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/toshimaru/nyan/releases/download/v0.9.5/nyan_Darwin_arm64.tar.gz"
+      sha256 "3a06d21a7f6c1a2deb0fbf6893fbe1f0ae56004646b67e245e7eade2f2907dd1"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/toshimaru/nyan/releases/download/v0.9.4/nyan_Darwin_arm64.tar.gz"
-    sha256 "8a406eb3b23865fc2aa24f64f5bf552fd15cc5d664768a16fcc603a2817db4cc"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/toshimaru/nyan/releases/download/v0.9.4/nyan_Linux_x86_64.tar.gz"
-    sha256 "04adcb05c76c3f7fc1d190dbdfee5db32e4dc739795bbbc014a90ff81f1b42ff"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/toshimaru/nyan/releases/download/v0.9.4/nyan_Linux_arm64.tar.gz"
-    sha256 "d1acf55a0d4da9a6d8707cafe03e0155e3504ef6801f982f2e61e0bd7292bfc0"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/toshimaru/nyan/releases/download/v0.9.5/nyan_Linux_x86_64.tar.gz"
+      sha256 "fb6460eda69bdd9ed8859d0fa775cbb710a64b2280077d148b5b3413cab20bfb"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/toshimaru/nyan/releases/download/v0.9.5/nyan_Linux_arm64.tar.gz"
+      sha256 "9a82def9f9b24051bb6d55a6e47daa9157f9542ffffb5a3826226adb235029dc"
+    end
   end
 
   def install
