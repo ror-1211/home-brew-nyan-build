@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/toshimaru/homebrew-nyan.svg?branch=master)](https://travis-ci.com/toshimaru/homebrew-nyan)
+[![Brew Check](https://github.com/toshimaru/homebrew-nyan/actions/workflows/ci.yml/badge.svg)](https://github.com/toshimaru/homebrew-nyan/actions/workflows/ci.yml)
 
 # homebrew-nyan
 

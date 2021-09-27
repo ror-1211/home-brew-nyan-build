@@ -1,5 +1,0 @@
-language: objective-c
-script:
-  - brew audit ./*.rb
-  - brew install -v ./*.rb
-  - brew test ./*.rb

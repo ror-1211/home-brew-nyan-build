@@ -1,0 +1,12 @@
+name: Brew Check
+on: [push]
+jobs:
+  build:
+    runs-on: macOS-11
+    steps:
+    - uses: actions/checkout@v2
+    - name: brew audit/install/test
+      run: |
+        brew audit ./*.rb
+        brew install -v ./*.rb
+        brew test ./*.rb
