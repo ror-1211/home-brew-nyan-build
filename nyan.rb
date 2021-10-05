@@ -5,29 +5,29 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v0.10.0/nyan_Darwin_x86_64.tar.gz"
-      sha256 "2657e1c05e13561329fccd3e230ef462b68b395c568c2e033ad96e4bf5928ad0"
+      url "https://github.com/toshimaru/nyan/releases/download/v0.10.1/nyan_Darwin_x86_64.tar.gz"
+      sha256 "928c14d31b14cd3d4bfd3bb9ec0a673caa5e167a946eaa98f7427cef99de1d7a"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/nyan/releases/download/v0.10.0/nyan_Darwin_arm64.tar.gz"
-      sha256 "ef7b99454fae477ea974aa76fe04683acc98a62c9ec6e6346311ab8bfc41c966"
+      url "https://github.com/toshimaru/nyan/releases/download/v0.10.1/nyan_Darwin_arm64.tar.gz"
+      sha256 "fa728b52af25f91e181b3100aabde6a09ffafed0d1d52b6a6161d75c9d2d8edb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v0.10.0/nyan_Linux_x86_64.tar.gz"
-      sha256 "c7d6dc0b0ce17859046e9572e895cb18d0cf30d1ead6ebe00ad88dea229dc5b8"
+      url "https://github.com/toshimaru/nyan/releases/download/v0.10.1/nyan_Linux_x86_64.tar.gz"
+      sha256 "24228e06e15456df7050b702f6b378c5dd4fc0f75a1b79576828958812837e37"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toshimaru/nyan/releases/download/v0.10.0/nyan_Linux_arm64.tar.gz"
-      sha256 "5c4a7811a0f1323c4893c69315ef66f342e47b44354f59deaf84206657f38683"
+      url "https://github.com/toshimaru/nyan/releases/download/v0.10.1/nyan_Linux_arm64.tar.gz"
+      sha256 "5a564c9e41ab954f8b44312c3888c26c1c604679b4e1e145ca461eed5d66294b"
     end
   end
 
